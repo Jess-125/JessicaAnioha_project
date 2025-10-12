@@ -21,7 +21,7 @@ def add_task(user_name, task_name, reminder_time):
         "status": "Pending"
     }
     users[user_name]["tasks"].append(task)
-    print(f"✅ Task '{task_name}' added for {user_name} at {reminder_time}.")
+    print(f"Task '{task_name}' added for {user_name} at {reminder_time}.")
 
 def view_tasks(user_name):
     """View all tasks for a specific user"""
@@ -34,18 +34,18 @@ def mark_task(user_name, task_index, status):
     tasks = users[user_name]["tasks"]
     if 0 <= task_index < len(tasks):
         tasks[task_index]["status"] = status
-        print(f"🟢 Task '{tasks[task_index]['task']}' marked as {status}.")
+        print(f" Task '{tasks[task_index]['task']}' marked as {status}.")
     else:
-        print("⚠️ Invalid task index.")
+        print("Invalid task index.")
 
 def show_pending_reminders():
     """Check for any reminders due in the next minute"""
     now = datetime.now().strftime("%H:%M")
-    print("\n🔔 Checking for upcoming reminders...")
+    print("\n Checking for upcoming reminders...")
     for user, data in users.items():
         for t in data["tasks"]:
             if t["status"] == "Pending" and t["reminder"] == now:
-                print(f"🔔 Reminder for {user}: {t['task']} (Time: {t['reminder']})")
+                print(f" Reminder for {user}: {t['task']} (Time: {t['reminder']})")
 
 def caregiver_dashboard(caregiver_name):
     """Show all elderly users’ tasks and statuses for a caregiver"""
@@ -56,7 +56,7 @@ def caregiver_dashboard(caregiver_name):
 
 # Example Usage (Simulated Flow)
 if __name__ == "__main__":
-    print("🧠 Cognitive Wellness & Memory Aid App (Version 1)\n")
+    print(" Cognitive Wellness & Memory Aid App (Version 1)\n")
 
     # Add sample tasks
     add_task("Grace", "Take morning medication", "09:00")
@@ -75,5 +75,5 @@ if __name__ == "__main__":
 
     # Simulate time-based reminder checking
     current_time = datetime.now().strftime("%H:%M")
-    print(f"\n🕒 Current time: {current_time}")
+    print(f"\n Current time: {current_time}")
     show_pending_reminders()
