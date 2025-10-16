@@ -1,0 +1,7 @@
+The update for the Version 1 Python prototype of the Cognitive Wellness & Memory Aid App.
+Core features implemented so far: elderly users can add, view, and mark tasks as Completed, Skipped, or 
+Deferred, while caregivers can monitor all elderly users’ tasks through a dashboard. The app includes 
+a simple text-based interface and time-based reminder checking. Additionally, basic data structures 
+were created to store user information and tasks, ensuring the system can track multiple users and 
+their task statuses. This version lays the foundation for future improvements such as audio/text notifications, 
+a graphical user interface, persistent storage, and enhanced accessibility features. 
