@@ -1,79 +1,28 @@
-# Version 1: Basic Task & Reminder System with Caregiver Dashboard
-# Description: A simple text-based memory aid app for elderly users and caregivers. Users can add, view, and mark tasks, while caregivers can see all elderly users’ tasks. Includes simple reminders and a text-based interface.
+import pandas as pd
+import os
 
-import time
-from datetime import datetime
-
-# Data Structures
-users = {
-    "Grace": {"role": "elderly", "tasks": []},
-    "Samuel": {"role": "caregiver", "tasks": []},
-    "Linda": {"role": "elderly", "tasks": []}
-}
-
-# Helper Functions
-
-def add_task(user_name, task_name, reminder_time):
-    """Add a new task for a specific user"""
-    task = {
-        "task": task_name,
-        "reminder": reminder_time,
-        "status": "Pending"
-    }
-    users[user_name]["tasks"].append(task)
-    print(f"Task '{task_name}' added for {user_name} at {reminder_time}.")
-
-def view_tasks(user_name):
-    """View all tasks for a specific user"""
-    print(f"\n {user_name}'s Task List:")
-    for i, t in enumerate(users[user_name]["tasks"], 1):
-        print(f"{i}. {t['task']} - {t['status']} (Reminder: {t['reminder']})")
-
-def mark_task(user_name, task_index, status):
-    """Mark a task as Completed, Skipped, or Deferred"""
-    tasks = users[user_name]["tasks"]
-    if 0 <= task_index < len(tasks):
-        tasks[task_index]["status"] = status
-        print(f" Task '{tasks[task_index]['task']}' marked as {status}.")
+def load_tasks(file='tasks.csv'):
+    if os.path.exists(file):
+        return pd.read_csv(file)
     else:
-        print("Invalid task index.")
+        df = pd.DataFrame(columns=['User', 'Task', 'Status'])
+        df.to_csv(file, index=False)
+        return df
 
-def show_pending_reminders():
-    """Check for any reminders due in the next minute"""
-    now = datetime.now().strftime("%H:%M")
-    print("\n Checking for upcoming reminders...")
-    for user, data in users.items():
-        for t in data["tasks"]:
-            if t["status"] == "Pending" and t["reminder"] == now:
-                print(f" Reminder for {user}: {t['task']} (Time: {t['reminder']})")
+def save_tasks(df, file='tasks.csv'):
+    df.to_csv(file, index=False)
 
-def caregiver_dashboard(caregiver_name):
-    """Show all elderly users’ tasks and statuses for a caregiver"""
-    print(f"\n {caregiver_name}'s Caregiver Dashboard")
-    for user, data in users.items():
-        if data["role"] == "elderly":
-            view_tasks(user)
+def add_task(user, task, file='tasks.csv'):
+    df = load_tasks(file)
+    new_task = {'User': user, 'Task': task, 'Status': 'Pending'}
+    df = df._append(new_task, ignore_index=True)
+    save_tasks(df, file)
+    print(f"Task added for {user}: {task}")
 
-# Example Usage (Simulated Flow)
-if __name__ == "__main__":
-    print(" Cognitive Wellness & Memory Aid App (Version 1)\n")
+def view_tasks(user, file='tasks.csv'):
+    df = load_tasks(file)
+    print(df[df['User'] == user])
 
-    # Add sample tasks
-    add_task("Grace", "Take morning medication", "09:00")
-    add_task("Samuel", "Check on Grace's progress", "09:30")  # caregiver can have tasks too
-    add_task("Linda", "Call doctor for appointment", "10:00")
-
-    # Elderly users view their tasks
-    view_tasks("Grace")
-    view_tasks("Linda")
-
-    # Mark a task as completed
-    mark_task("Grace", 0, "Completed")
-
-    # Show caregiver dashboard
-    caregiver_dashboard("Samuel")
-
-    # Simulate time-based reminder checking
-    current_time = datetime.now().strftime("%H:%M")
-    print(f"\n Current time: {current_time}")
-    show_pending_reminders()
+# Example test (hardcoded)
+add_task('Grace', 'Take medication at 8 AM')
+view_tasks('Grace')
