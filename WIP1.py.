@@ -1,3 +1,0 @@
-print( "This is WIP1.py" )
-number = 5
-print(number * 2)
