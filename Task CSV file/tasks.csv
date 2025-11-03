@@ -1,0 +1,4 @@
+User,Role,Task,Reminder,Status
+Grace,elderly,Take morning medication,09:00,Completed
+Samuel,caregiver,Check on Grace's progress,09:30,Pending
+Linda,elderly,Call doctor for appointment,10:00,Pending
