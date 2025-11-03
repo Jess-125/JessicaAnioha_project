@@ -5,7 +5,6 @@ import csv
 
 CSV_FILE = "tasks.csv"
 
-# ---------------- Helper Functions ---------------- #
 
 def load_tasks():
     """Load tasks from CSV"""
@@ -19,18 +18,15 @@ def save_tasks(df):
     """Save tasks to CSV"""
     df.to_csv(CSV_FILE, index=False)
 
-# ---------------- Streamlit App ---------------- #
 
 st.title("Cognitive Wellness & Memory Aid App")
 
 # Load CSV
 df = load_tasks()
 
-# ---------------- View Tasks ---------------- #
 st.subheader("All Tasks")
 st.dataframe(df)
 
-# ---------------- Add Task ---------------- #
 st.subheader("Add New Task")
 with st.form("add_task_form"):
     user = st.selectbox("User", ["Grace", "Samuel", "Linda"])
@@ -45,7 +41,7 @@ with st.form("add_task_form"):
         st.success(f"Task '{task_name}' added for {user}")
         st.experimental_rerun()
 
-# ---------------- Mark Task Completed ---------------- #
+
 st.subheader("Update Task Status")
 if not df.empty:
     task_index = st.selectbox("Select Task", df.index, format_func=lambda i: f"{df.at[i,'User']} - {df.at[i,'Task']} ({df.at[i,'Status']})")
@@ -55,11 +51,11 @@ if not df.empty:
         st.success(f"Task '{df.at[task_index,'Task']}' marked as Completed")
         st.experimental_rerun()
 
-# ---------------- Pending Tasks ---------------- #
+
 st.subheader("Pending Tasks")
 st.dataframe(df[df["Status"]=="Pending"])
 
-# ---------------- Reminders Now ---------------- #
+
 st.subheader("Reminders Now")
 current_time = datetime.now().strftime("%H:%M")
 reminders_now = df[df["Reminder"] == current_time]
