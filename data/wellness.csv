@@ -1,3 +1,5 @@
-User,Date,Meal,Mood,AudioNote 
-Grace,2025-12-04,The Hamburgler,Excellent,wellness_Grace_2025-12-04_1764883734723.wav
-Grace,2025-12-04,big mac,Excellent,wellness_Grace_2025-12-04_1764884316773.wav
+User,Date,Meal,Mood,AudioNote
+Grace,2025-12-05,yes,Excellent,wellness_Grace_2025-12-05_1764965772965.wav
+Grace,2025-12-05,test w/o audio,Bad,
+Grace,2025-12-05,hot dogs,Excellent,
+Grace,2025-12-05,greens,Good,wellness_Grace_2025-12-05_1764966602874.wav

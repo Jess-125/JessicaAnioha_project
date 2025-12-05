@@ -25,12 +25,22 @@ if "tasks_df" not in st.session_state:
         st.session_state.tasks_df = pd.read_csv(TASKS_FILE)
     else:
         st.session_state.tasks_df = pd.DataFrame(columns=["User","Role","Task","Reminder","Status","ID"])
+# Ensure required columns exist for tasks
+for col in ["User","Role","Task","Reminder","Status","ID"]:
+    if col not in st.session_state.tasks_df.columns:
+        st.session_state.tasks_df[col] = ""  # minimal backfill
+
 if "wellness_df" not in st.session_state:
     # Load from CSV if exists, otherwise create empty dataframe
     if os.path.exists(WELLNESS_FILE):
         st.session_state.wellness_df = pd.read_csv(WELLNESS_FILE)
     else:
         st.session_state.wellness_df = pd.DataFrame(columns=["User","Date","Meal","Mood","AudioNote"])
+# Ensure required columns exist for wellness, including AudioNote
+for col in ["User","Date","Meal","Mood","AudioNote"]:
+    if col not in st.session_state.wellness_df.columns:
+        default = "" if col != "Mood" else "Excellent"
+        st.session_state.wellness_df[col] = default
 if "audio_recordings" not in st.session_state:
     st.session_state.audio_recordings = {}
 if "current_audio_id" not in st.session_state:
@@ -273,8 +283,11 @@ elif page == "Wellness Tracker":
             with col3:
                 st.write(row['Mood'])
             with col4:
-                if row['AudioNote']:
-                    audio_file = row['AudioNote']
+                audio_note = row["AudioNote"] if "AudioNote" in row.index else ""
+                if isinstance(audio_note, float) and pd.isna(audio_note):
+                    audio_note = ""
+                if audio_note:
+                    audio_file = audio_note
                     audio_path = os.path.join(AUDIO_FOLDER, audio_file)
                     
                     if os.path.exists(audio_path):
