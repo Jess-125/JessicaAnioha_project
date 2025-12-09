@@ -1,0 +1,55 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #DDEEFF;
+    --accent-color: #50E3C2;
+    --text-color: #1A1A1A;
+    --card-bg: #FFFFFF;
+    --section-bg: #F7F9FC;
+    --border-radius: 12px;
+}
+
+/* Page background */
+body {
+    background-color: var(--section-bg);
+}
+
+/* Main title */
+h1 {
+    color: var(--primary-color); 
+    font-weight: 700;
+}
+
+/* Sections */
+.section {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 6px solid var(--primary-color);
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.stButton>button:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+/* Inputs */
+.stTextInput>div>div>input {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.stSelectbox>div>div>div {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+}
