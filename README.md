@@ -1,1 +1,1 @@
-# JessicaAnioha_project
+# Cognitive Wellness and Memory Aid_project
