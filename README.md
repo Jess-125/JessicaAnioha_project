@@ -240,8 +240,7 @@ Okay = 3
 Good = 4
 Excellent = 5
 The x-axis is date; the y-axis is mood score.
-![Screenshot (840)](images/Screenshot840.png)
-
+<img width="1600" height="900" alt="Screenshot (840)" src="https://github.com/user-attachments/assets/f9fdfc65-62b7-4ce2-be01-5c931726bdcb" />
 
 ****5.10 Voice Recorder****
 The app includes a simple Voice Recorder built with a Streamlit audio recording component.​
