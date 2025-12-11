@@ -117,10 +117,12 @@ Choose a different profile and sign in again.
 
 You cannot proceed without selecting a user.
 
-![Screenshot (833)](images/Screenshot833.png)
+<img width="1600" height="859" alt="Screenshot (832)" src="https://github.com/user-attachments/assets/a2aee619-6c36-4882-810c-8994df0769db" />
 
-![Screenshot (834)](images/Screenshot834.png)
+<img width="1600" height="856" alt="Screenshot (834)" src="https://github.com/user-attachments/assets/780f8316-54c6-439a-bf1e-a7b673fd78b3" />
 
+
+<img width="1600" height="859" alt="Screenshot (844)" src="https://github.com/user-attachments/assets/12e621e7-3d73-436f-8da1-7abad57ffca3" />
 
 ****5.2 Sidebar Navigation****
 After signing in, the left sidebar displays the main menu:
@@ -132,8 +134,8 @@ Reminders
 Wellness Tracker
 Sign out
 Click a menu item to move between pages.
-![Screenshot (835)](images/Screenshot835.png)
 
+<img width="581" height="853" alt="Screenshot (835)" src="https://github.com/user-attachments/assets/d2ea4604-1e1b-4915-98dc-9a36b22ffb42" />
 
 ****5.3 Dashboard****
 The Dashboard page gives an overview of tasks:
@@ -147,8 +149,7 @@ Pending Tasks: shows only tasks not yet completed.
 Completed Tasks: shows tasks that have been finished.
 The table below updates automatically when you click a button.
 
-![Screenshot (835)](images/Screenshot835.png)
-
+<img width="1600" height="859" alt="Screenshot (844)" src="https://github.com/user-attachments/assets/7893d497-7af5-4966-a2b9-0b551b949ddc" />
 
 ****5.4 All Tasks****
 The All Tasks page shows every task in a single table:
@@ -160,7 +161,8 @@ Reminder (HH:MM)
 Status (Pending / Completed)
 ID (internal unique identifier)
 Use this page to review all tasks at once.
-![Screenshot (836)](images/Screenshot836.png)
+
+<img width="1600" height="850" alt="Screenshot (836)" src="https://github.com/user-attachments/assets/61bd538d-6621-4214-80c3-f5c8862bdfa9" />
 
 ****5.5 Add Task****
 Use Add Task to create new reminders:
@@ -170,19 +172,23 @@ Assign To: select Grace, Samuel, or Linda.
 Task Name: short description (e.g., “Take evening medicine”).
 Reminder Time (HH:MM): time in 24-hour format, such as 09:30 or 18:45.
 Click “Add Task”.
+
+<img width="1600" height="853" alt="Screenshot (842)" src="https://github.com/user-attachments/assets/8a58c837-e7bf-4688-999b-30afd994abe4" />
+
 Behavior:
 If the time is not in HH:MM format, the app shows:
 “Invalid time format. Use HH:MM”.
 If valid, the task is saved, a success message appears, and the page refreshes so you see the new entry in task tables.
-![Screenshot (842)](images/Screenshot842.png)
-![Screenshot (843)](images/Screenshot843.png)
+
+<img width="1600" height="868" alt="Screenshot (843)" src="https://github.com/user-attachments/assets/9d036624-36c9-450f-85e2-406537af8584" />
 
 
 ****5.6 Pending Tasks****
 The Pending Tasks page shows only tasks whose status is Pending:
 Use this page to see everything that is still outstanding.
 Once a task is marked Completed, it disappears from this list.
-![Screenshot (841)](images/Screenshot841.png)
+
+<img width="1600" height="859" alt="Screenshot (841)" src="https://github.com/user-attachments/assets/efb547a6-2d56-42d0-8f50-339a2576b0ba" />
 
 ****5.7 Reminders Page****
 The Reminders page checks for tasks scheduled at the current time:
@@ -226,7 +232,8 @@ Today’s date
 Meal text
 Selected mood
 Shows a confirmation and refreshes the page.
-![Screenshot (839)](images/Screenshot839.png)
+
+<img width="1600" height="900" alt="Screenshot (839)" src="https://github.com/user-attachments/assets/9244bbd6-0b88-4d2c-9a6f-9fbc2463cd13" />
 
 *****5.9.2 Viewing Past Data and Mood Chart*****
 Below the form:
