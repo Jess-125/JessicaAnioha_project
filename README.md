@@ -3,8 +3,8 @@
 ***Overview**
 A browser-based cognitive wellness and memory support app built with Streamlit. The app lets older adults and caregivers manage daily tasks, receive reminders, track wellness, and record short audio notes. Users interact with the system through a clean, guided web interface that runs locally on streamlit.
 
-##**Features:**
-###Reminders (scheduled, with snooze & complete actions)*****
+**Features:**
+*****Reminders (scheduled, with snooze & complete actions)*****
 *****Task creation & tracking*****
 *****Dashboard view of pending/completed tasks*****
 *****Daily wellness logging (meal + mood)*****
