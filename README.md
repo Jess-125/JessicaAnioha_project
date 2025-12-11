@@ -3,61 +3,95 @@
 **User Guide**
 
 ***Overview**
+
 A browser-based cognitive wellness and memory support app built with Streamlit. The app lets older adults and caregivers manage daily tasks, receive reminders, track wellness, and record short audio notes. Users interact with the system through a clean, guided web interface that runs locally on streamlit.
 
 **Features:**
 *****Reminders (scheduled, with snooze & complete actions)*****
+
 *****Task creation & tracking*****
+
 *****Dashboard view of pending/completed tasks*****
+
 *****Daily wellness logging (meal + mood)*****
+
 *****Mood trends visualization*****
+
 *****Built-in voice recording*****
+
 *****Multi-user support (Grace, Samuel, Linda)*****
 
 **Table of Contents**
+
 -1.Requirements
+
 -2. Installation
+
 -3. How to Run the App
+
 -4. First time setup
+
 -5. Using the App — Step-by-step Guide
+
 -6. Audio Recording Feature
+
 -7. Common Errors & Fixes
+
 -8. Known Limitations
 
 ***1. Requirements**
 -Python 3.9 or later (developed and tested with Python 3.10).
+
 -A modern web browser (Chrome, Edge, Firefox, Safari).
+
 -Git (optional, only if you prefer cloning the repository).​
+
 -pip (Python package installer)
 
 -Streamlit
+
 -Pandas
+
 -Pydub
+
 -audiorecorder Streamlit component
+
 -FFmpeg installed on your machine (for audio processing)
 
 **2. Installation**
+
 ****2.1 Get the Project****
+
 Option A – Clone (recommended)
+
 bash
 git clone https://github.com/your-username/cognitive-wellness-app.git
 cd cognitive-wellness-app
 
 Option B – Download ZIP
+
 On GitHub, click Code → Download ZIP.
+
 Extract the ZIP.
+
 Open the extracted folder in your terminal/command prompt.
 
 ****2.2 Create and Activate a Virtual Environment*****
+
 bash
+
 python -m venv .venv
+
 # Windows
 .venv\Scripts\activate
+
 # macOS / Linux
 source .venv/bin/activate
 
 ****2.3 Install Dependencies****
+
 bash
+
 pip install -r requirements.txt
 
 If requirements.txt is not present, create one with at least:
