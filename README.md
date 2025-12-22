@@ -40,6 +40,7 @@ A browser-based cognitive wellness and memory support app built with Streamlit. 
 -8. Known Limitations
 
 ***1. Requirements**
+
 -Python 3.9 or later (developed and tested with Python 3.10).
 
 -A modern web browser (Chrome, Edge, Firefox, Safari).
@@ -133,6 +134,7 @@ If it does not open, copy the URL shown in the terminal and paste it into your b
 To stop the app, press Ctrl + C in the terminal.
 
 **4. First-Time Setup**
+
 No API keys, accounts, or external databases are required.
 All data (tasks and wellness logs) is stored temporarily in memory using st.session_state.
 Data resets when:
@@ -141,7 +143,9 @@ The app server is stopped and restarted.
 If in a future version API keys or external services are added, instructions for creating a keys.py or .env file will be added here with a clear example.
 
 **5. Using the App**
+
 ****5.1 Login / Select Profile****
+
 On the start page, locate “Login / Select Profile”.
 Use the Select profile dropdown to choose:
 Grace (elderly)
@@ -163,6 +167,7 @@ You cannot proceed without selecting a user.
 <img width="1600" height="859" alt="Screenshot (844)" src="https://github.com/user-attachments/assets/12e621e7-3d73-436f-8da1-7abad57ffca3" />
 
 ****5.2 Sidebar Navigation****
+
 After signing in, the left sidebar displays the main menu:
 Dashboard
 All Tasks
@@ -176,6 +181,7 @@ Click a menu item to move between pages.
 <img width="581" height="853" alt="Screenshot (835)" src="https://github.com/user-attachments/assets/d2ea4604-1e1b-4915-98dc-9a36b22ffb42" />
 
 ****5.3 Dashboard****
+
 The Dashboard page gives an overview of tasks:
 At the top, three buttons:
 Total Tasks
@@ -190,6 +196,7 @@ The table below updates automatically when you click a button.
 <img width="1600" height="859" alt="Screenshot (844)" src="https://github.com/user-attachments/assets/7893d497-7af5-4966-a2b9-0b551b949ddc" />
 
 ****5.4 All Tasks****
+
 The All Tasks page shows every task in a single table:
 Columns:
 User (Grace, Samuel, Linda)
@@ -203,6 +210,7 @@ Use this page to review all tasks at once.
 <img width="1600" height="850" alt="Screenshot (836)" src="https://github.com/user-attachments/assets/61bd538d-6621-4214-80c3-f5c8862bdfa9" />
 
 ****5.5 Add Task****
+
 Use Add Task to create new reminders:
 Open Add Task from the sidebar.
 Fill in the form:
@@ -222,6 +230,7 @@ If valid, the task is saved, a success message appears, and the page refreshes s
 
 
 ****5.6 Pending Tasks****
+
 The Pending Tasks page shows only tasks whose status is Pending:
 Use this page to see everything that is still outstanding.
 Once a task is marked Completed, it disappears from this list.
@@ -229,12 +238,15 @@ Once a task is marked Completed, it disappears from this list.
 <img width="1600" height="859" alt="Screenshot (841)" src="https://github.com/user-attachments/assets/efb547a6-2d56-42d0-8f50-339a2576b0ba" />
 
 ****5.7 Reminders Page****
+
 The Reminders page checks for tasks scheduled at the current time:
 The app reads the system time in HH:MM format.
 Any tasks whose Reminder matches the current time appear in a table.
 If nothing is scheduled for the current minute, the page displays:
-“No reminders at this time.”
+“No reminders at this time.” 
+
 ****5.8 Reminder Pop-ups (Modals)****
+
 The app actively checks tasks and shows pop-up reminders:
 When the current time matches a task’s Reminder and its Status is Pending, a modal window appears with:
 The task name.
@@ -252,7 +264,9 @@ Saves the new time and closes the popup.
 Each reminder is only shown once for that time, to avoid repeated pop-ups.
 
 ****5.9 Wellness Tracker****
+
 *****5.9.1 Logging Today’s Wellness*****
+
 Go to Wellness Tracker.
 Under “Log Today’s Wellness”:
 What did you eat today?: write a short description of your meals.
@@ -274,6 +288,7 @@ Shows a confirmation and refreshes the page.
 <img width="1600" height="900" alt="Screenshot (839)" src="https://github.com/user-attachments/assets/9244bbd6-0b88-4d2c-9a6f-9fbc2463cd13" />
 
 *****5.9.2 Viewing Past Data and Mood Chart*****
+
 Below the form:
 View Past Data: shows a table of all logged entries for the signed-in user.
 Mood Over Time:
@@ -290,8 +305,10 @@ The x-axis is date; the y-axis is mood score.
 
 
 ****5.10 Voice Recorder****
-The app includes a simple Voice Recorder built with a Streamlit audio recording component.​
+The app includes a simple Voice Recorder built with a Streamlit audio recording component.
+​
 5.10.1 Using the Recorder
+
 Scroll to the Voice Recorder section.
 Click “Start Recording”.
 Speak into your microphone.
@@ -300,33 +317,47 @@ After stopping:
 The recording is played back in the app.
 A file named recorded_audio.wav is saved in the project folder.
 A Download Recording button lets you save the audio locally.
+
 5.10.2 Browser Permissions
+
 If you see no audio or cannot record, check that:
 The browser prompted for microphone access.
 You clicked Allow.
 Microphone is enabled in system and browser privacy settings.
 
 **6. Common Issues & Fixes**
+
 Problem / Message
 Likely Cause
 What to Do
 
 ****6.1. Invalid time format. Use HH:MM****
+
 Reminder not written as HH:MM
 Enter a valid 24-hour time, e.g., 09:30 or 18:45.
+
 ****6.2. No reminder pop-ups at the expected time****
+
 Time does not exactly match reminder time
 Check your system clock and ensure reminder times are correct to the minute.
+
 ****6.3. No audio recorded or played back****
+
 Microphone access blocked or not granted
 Allow microphone permissions in the browser and reload the page.
+
 ****6.4. Audio export or pydub errors****
+
 FFmpeg missing or not in PATH
-Install FFmpeg and confirm ffmpeg -version works in your terminal. ​
+Install FFmpeg and confirm ffmpeg -version works in your terminal. 
+​
 ****6.5. Page or data resets unexpectedly****
+
 App restarted or browser reloaded
 Remember that data is stored only in memory and is not persisted yet.
+
 ****6.6. FFmpeg not found****
+
 Fix: install FFmpeg
 Mac:
 brew install ffmpeg
@@ -338,6 +369,7 @@ Add /bin to PATH
 
 
 **7. Current Limitations**
+
 No persistent storage
 Tasks and wellness logs are stored in memory only and are lost when the app/server restarts.
 Fixed demo profiles
