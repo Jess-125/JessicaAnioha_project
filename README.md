@@ -23,41 +23,41 @@ A browser-based cognitive wellness and memory support app built with Streamlit. 
 
 **Table of Contents**
 
--1.Requirements
+1.Requirements
 
--2. Installation
+2. Installation
 
--3. How to Run the App
+3. How to Run the App
 
--4. First time setup
+4. First time setup
 
--5. Using the App — Step-by-step Guide
+5. Using the App — Step-by-step Guide
 
--6. Audio Recording Feature
+6. Audio Recording Feature
 
--7. Common Errors & Fixes
+7. Common Errors & Fixes
 
--8. Known Limitations
+8. Known Limitations
 
 ***1. Requirements**
 
--Python 3.9 or later (developed and tested with Python 3.10).
+Python 3.9 or later (developed and tested with Python 3.10).
 
--A modern web browser (Chrome, Edge, Firefox, Safari).
+A modern web browser (Chrome, Edge, Firefox, Safari).
 
--Git (optional, only if you prefer cloning the repository).​
+Git (optional, only if you prefer cloning the repository).​
 
--pip (Python package installer)
+pip (Python package installer)
 
--Streamlit
+Streamlit
 
--Pandas
+Pandas
 
--Pydub
+Pydub
 
--audiorecorder Streamlit component
+audiorecorder Streamlit component
 
--FFmpeg installed on your machine (for audio processing)
+FFmpeg installed on your machine (for audio processing)
 
 **2. Installation**
 
